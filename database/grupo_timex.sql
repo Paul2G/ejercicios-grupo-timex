@@ -2,13 +2,16 @@ CREATE DATABASE IF NOT EXISTS `grupo_timex`;
 
 USE `grupo_timex`;
 
+DROP TABLE employees;
+
 CREATE TABLE IF NOT EXISTS `employees` (
     `IdRegistro` INT UNSIGNED NOT NULL AUTO_INCREMENT,
     `Nombre` VARCHAR(255)NOT NULL,
     `Apellidos` VARCHAR(255) NOT NULL,
     `FechaNacimiento` DATE NOT NULL,
     `FechaDeRegistroEnSistema` DATE NOT NULL DEFAULT(CURDATE()),
-    PRIMARY KEY (`IdRegistro`)
+    PRIMARY KEY (`IdRegistro`),
+    CONSTRAINT u_name UNIQUE(Nombre, Apellidos)
 );
 
 /*Importacion de datos desde script MySQL*/
