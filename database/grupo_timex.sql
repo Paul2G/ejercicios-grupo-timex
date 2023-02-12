@@ -4,7 +4,7 @@ USE `grupo_timex`;
 
 CREATE TABLE IF NOT EXISTS `employees` (
     `IdRegistro` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    `Nombre` VARCHAR(255)NOT NULL,
+    `Nombre` VARCHAR(255) NOT NULL,
     `Apellidos` VARCHAR(255) NOT NULL,
     `FechaNacimiento` DATE NOT NULL,
     `FechaDeRegistroEnSistema` DATE NOT NULL DEFAULT(CURDATE()),
