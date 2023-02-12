@@ -2,8 +2,6 @@ CREATE DATABASE IF NOT EXISTS `grupo_timex`;
 
 USE `grupo_timex`;
 
-DROP TABLE employees;
-
 CREATE TABLE IF NOT EXISTS `employees` (
     `IdRegistro` INT UNSIGNED NOT NULL AUTO_INCREMENT,
     `Nombre` VARCHAR(255)NOT NULL,
